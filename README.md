@@ -1,0 +1,5 @@
+# modele_prediction_covid19
+
+Mini projet personnel 
+Création d'un modèle de prédiction utilisant un algorithme ML de Régression logistique depuis l'analyse du dataset : Covid Dataset.csv
+
