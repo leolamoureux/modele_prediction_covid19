@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Prédiction covid19 </title>
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Rentrez vos informations et voyez si vous êtes possiblement contaminés</h1>
+	<legend>Pour OUI tapez 0, pour NON tapez 1</legend>
+
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Breathing Problem" placeholder="Problèmes pour respirer ?" required="required" />
+        <input type="text" name="Fever" placeholder="Fièvre" required="required" />
+		<input type="text" name="Dry Cough" placeholder="Toux sèche ?" required="required" />
+        <input type="text" name="Sore throat" placeholder="Gorge irritée ?" required="required" />
+        <input type="text" name="Running Nose" placeholder="Nez qui coule ?" required="required" />
+        <input type="text" name="Asthma" placeholder="Asthme ?" required="required" />
+        <input type="text" name="Chronic Lung Disease" placeholder="Maladies chroniques ?" required="required" />
+        <input type="text" name="Headache" placeholder="Migraine ?" required="required" />
+        <input type="text" name="Heart Disease" placeholder="Problèmes cardiaques ?" required="required" />
+        <input type="text" name="Diabetes" placeholder="Diabète ?" required="required" />
+        <input type="text" name="Hyper Tension" placeholder="Hyper tension ?" required="required" />
+        <input type="text" name="Fatigue" placeholder="Fatigue ?" required="required" />
+        <input type="text" name="Gastrointestinal" placeholder="Problèmes intestinaux ?" required="required" />
+        <input type="text" name="Abroad travel" placeholder="Récent voyage à l'étranger ?" required="required" />
+        <input type="text" name="Contact with COVID Patient" placeholder="Contact avec des gens positifs ?" required="required" />
+        <input type="text" name="Attended Large Gathering" placeholder="Assisté a un grand rassemblement ?" required="required" />
+        <input type="text" name="Visited Public Exposed Place" placeholder="Visite de lieux publiques ?" required="required" />
+        <input type="text" name="Family working in Public Exposed Places" placeholder="Membres de la famille exposés ?" required="required" />
+        <input type="text" name="Wearing Masks" placeholder="Port du masque ?" required="required" />
+        <input type="text" name="Sanitization from Market" placeholder="Désinfection au supermarché ?" required="required" />
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
